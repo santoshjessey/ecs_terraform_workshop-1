@@ -1,6 +1,6 @@
 module "vpc" {
   source         = "terraform-aws-modules/vpc/aws"
-  version        = "0.12.6"
+  version        = "3.14.2"
   name           = "test_ecs_provisioning"
   cidr           = "10.0.0.0/16"
   azs            = ["us-east-1a", "us-east-1b", "us-east-1c"]
