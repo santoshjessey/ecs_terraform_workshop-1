@@ -12,7 +12,7 @@ It consists of:
 - Application Load Balancer (ALB)
 
 ## How to create the infrastructure?
-This example implies that you have already AWS account and Terraform CLI installed.
+This example implies that you have already AWS account and Terraform CLI installed. 
 1. `git clone https://github.com/binpipe/ecs_terraform_workshop.git`
 2. cd ecs_terraform_workshop
 3. terraform init
