@@ -39,7 +39,7 @@ resource "aws_ecs_service" "service" {
   name            = "web-service"
   cluster         = aws_ecs_cluster.web-cluster.id
   task_definition = aws_ecs_task_definition.task-definition-test.arn
-  desired_count   = 10
+  desired_count   = 2
   ordered_placement_strategy {
     type  = "binpack"
     field = "cpu"
@@ -53,7 +53,7 @@ resource "aws_ecs_service" "service" {
   lifecycle {
     ignore_changes = [desired_count]
   }
-  launch_type = "EC2"
+  launch_type = "FARGATE"
   depends_on  = [aws_lb_listener.web-listener]
 }
 
